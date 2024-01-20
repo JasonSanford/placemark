@@ -279,7 +279,7 @@ export const FILE_LIMIT_MB = env.NEXT_PUBLIC_FILE_LIMIT_MB;
 export const FILE_LIMIT_BYTES = FILE_LIMIT_MB * MB_TO_BYTES;
 
 export const SCALE_UNITS = ["imperial", "metric", "nautical"] as const;
-export type ScaleUnit = typeof SCALE_UNITS[number];
+export type ScaleUnit = (typeof SCALE_UNITS)[number];
 export const zScaleUnit = z.enum(SCALE_UNITS);
 
 export const purple900a: RGBA = [49, 46, 129, 255];
